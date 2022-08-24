@@ -1,6 +1,6 @@
 ## ZK Proof of Age
 
-how does it work?
+// how does it work?
 
 - your "hash age"
 
@@ -12,7 +12,7 @@ how does it work?
 
     - to verify that you're N years old, you hash from proof N days ago to T
 
-timeline:
+// timeline:
 
 birthday ----> N days ago ----> today ----> terminal date
 
