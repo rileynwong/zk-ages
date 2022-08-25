@@ -14,3 +14,5 @@
 - Start with a public hash function H and a secret private seed _s_.
 - Given a person's birthdate _d_, we, as a third party, provide a signed statement. This statement essentially is _s_ hashed _n_ times, where _n_ is the number of days from _d_ to a terminal date in the future, _T_. This is the "terminal age" signature, and it has been signed by a trusted third party (us). For example, maybe Riley's ID card contains their "terminal age" signature, and Bert trusts the issuer of the ID card. 
 - Riley keeps _s_ to themselves. With _s_, Riley can generate a valid "proof of age" for any age that they are older than. 
+- Prove: Riley can generate a "proof of age" signature for any age _n_ by hashing _s_ _n_ number of times. 
+- Verify: Given the minimum age (e.g. 21), the "proof of age" signature, and the "terminal age" signature, Bert can verify that Riley is at least the minumum age by hashing the "proof of age" _x_ times, with _x_ being the number of days between the "proof of age" date and the terminal date T. If the result H<sup>x</sup>(s) matches the "terminal age" signature, the "proof of age" has been verified. 
